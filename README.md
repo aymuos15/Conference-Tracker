@@ -28,12 +28,9 @@ Please use [tag] when doing any one of the following.
 - A prompt to update deadlines and links for perplexity.
 
 ## Todos
-- [ ] Check if all links are working or not
-- [ ] Add github logo and link to the repository
-- [ ] Add sorting options (by date, alphabetically)
-- [ ] Add notification feature for upcoming deadlines
-- [ ] Make a better prompt for perplexity. See: `linkprompt.py`
 - [ ] Create a VLM agent to see the links and provide regular updates.
+- [ ] Make a better prompt for perplexity. See: `linkprompt.py`
+- [ ] Add notification feature (to email) for upcoming deadlines.
 
 # Break List
 - [] 3DV

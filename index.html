@@ -14,6 +14,8 @@
         <button class="filter-btn cv" data-category="Computer Vision">Computer Vision</button>
         <button class="filter-btn ml" data-category="Machine Learning">Machine Learning</button>
         <button class="filter-btn med" data-category="Medical Image Analysis">Medical Image Analysis</button>
+        <button class="filter-btn nlp" data-category="NLP">NLP</button>
+        <button class="filter-btn robotics" data-category="Robotics">Robotics</button>
     </div>
     
     <div id="filter-info" class="filter-info"></div>
@@ -22,7 +24,7 @@
         <thead>
             <tr>
                 <th>Conference</th>
-                <th>Date</th>
+                <th>Submission Deadline</th>
                 <th>Website</th>
             </tr>
         </thead>
@@ -81,22 +83,20 @@
                 const nameCell = document.createElement('td');
                 
                 // Extract acronym and full name
-                const nameParts = conference.name.match(/^([A-Z]+)(\s?\(.+\))?$/);
-                if (nameParts) {
+                const nameParts = conference.name.split(/\s+(\(.+\))$/);
+                if (nameParts.length > 1) {
                     // Create bold element for acronym
                     const acronym = document.createElement('strong');
-                    acronym.textContent = nameParts[1];
+                    acronym.textContent = nameParts[0];
                     nameCell.appendChild(acronym);
                     
-                    // Add full name on new line if it exists
-                    if (nameParts[2]) {
-                        const fullName = document.createElement('div');
-                        fullName.className = 'conference-full-name';
-                        fullName.textContent = nameParts[2].trim();
-                        nameCell.appendChild(fullName);
-                    }
+                    // Add full name on new line
+                    const fullName = document.createElement('div');
+                    fullName.className = 'conference-full-name';
+                    fullName.textContent = nameParts[1].trim();
+                    nameCell.appendChild(fullName);
                 } else {
-                    // Fallback if the regex doesn't match
+                    // Fallback if no parentheses found
                     nameCell.textContent = conference.name;
                 }
                 
@@ -113,31 +113,41 @@
                     if (category === 'Computer Vision') categorySpan.classList.add('cv');
                     if (category === 'Machine Learning') categorySpan.classList.add('ml');
                     if (category === 'Medical Image Analysis') categorySpan.classList.add('med');
+                    if (category === 'NLP') categorySpan.classList.add('nlp');
+                    if (category === 'Robotics') categorySpan.classList.add('robotics');
                     
                     categoriesDiv.appendChild(categorySpan);
                 });
                 
                 nameCell.appendChild(categoriesDiv);
                 
-                // Date cell - format to 3 letters for month and 2 digits for year
-                const dateCell = document.createElement('td');
-                const dateText = conference.date.replace(
-                    /(\w+)\s(\d+)-\d+,\s(\d{4})/,
-                    (match, month, day, year) => `${month.substring(0, 3)} '${year.substring(2)}`
+                // Deadline cell - format to short form
+                const deadlineCell = document.createElement('td');
+                const deadlineText = conference.deadline.replace(
+                    /(\w+)\s(\d+),\s(\d{4})/,
+                    (match, month, day, year) => `${month.substring(0, 3)} ${day}, '${year.substring(2)}`
                 );
-                dateCell.textContent = dateText;
+                deadlineCell.textContent = deadlineText;
                 
                 // Website cell with link to the actual website
                 const websiteCell = document.createElement('td');
                 const link = document.createElement('a');
-                link.href = `https://${conference.website}`;
+                
+                // Ensure the URL has a protocol prefix
+                let websiteUrl = conference.website;
+                if (!websiteUrl.startsWith('http://') && !websiteUrl.startsWith('https://')) {
+                    websiteUrl = 'https://' + websiteUrl;
+                }
+                
+                link.href = websiteUrl;
                 link.textContent = 'Link';
                 link.target = '_blank'; // Open in new tab
+                link.rel = "noopener noreferrer"; // Security best practice for external links
                 websiteCell.appendChild(link);
                 
                 // Add all cells to the row
                 row.appendChild(nameCell);
-                row.appendChild(dateCell);
+                row.appendChild(deadlineCell);
                 row.appendChild(websiteCell);
                 
                 // Add the row to the table

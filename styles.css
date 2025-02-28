@@ -49,6 +49,18 @@ h1 {
     border: 1px solid #2ecc7140;
 }
 
+.filter-btn.nlp {
+    background-color: #9b59b620;
+    color: #9b59b6;
+    border: 1px solid #9b59b640;
+}
+
+.filter-btn.robotics {
+    background-color: #f39c1220;
+    color: #f39c12;
+    border: 1px solid #f39c1240;
+}
+
 .filter-btn:hover, .filter-btn.active {
     transform: translateY(-2px);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -71,6 +83,16 @@ h1 {
 
 .filter-btn.med.active {
     background-color: #2ecc71;
+    color: white;
+}
+
+.filter-btn.nlp.active {
+    background-color: #9b59b6;
+    color: white;
+}
+
+.filter-btn.robotics.active {
+    background-color: #f39c12;
     color: white;
 }
 
@@ -131,6 +153,16 @@ a:hover {
 .med {
     background-color: #2ecc7120;
     color: #2ecc71;
+}
+
+.nlp {
+    background-color: #9b59b620;
+    color: #9b59b6;
+}
+
+.robotics {
+    background-color: #f39c1220;
+    color: #f39c12;
 }
 
 .hidden {

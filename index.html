@@ -127,11 +127,12 @@
                 );
                 dateCell.textContent = dateText;
                 
-                // Website cell with link text only
+                // Website cell with link to the actual website
                 const websiteCell = document.createElement('td');
                 const link = document.createElement('a');
-                link.href = '#'; // Placeholder link
+                link.href = `https://${conference.website}`;
                 link.textContent = 'Link';
+                link.target = '_blank'; // Open in new tab
                 websiteCell.appendChild(link);
                 
                 // Add all cells to the row

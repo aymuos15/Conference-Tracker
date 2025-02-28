@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conferences</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Add FontAwesome for GitHub icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <h1>Conferences</h1>
+    <div class="contribute-container">
+        <a href="https://github.com/aymuos15/Conference-Tracker" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Contribute
+        </a>
+    </div>
+    
+    <h1>Search a Conference!</h1>
     
     <div class="filter-container">
         <button class="filter-btn all active" data-category="all">All Conferences</button>
@@ -16,6 +24,17 @@
         <button class="filter-btn med" data-category="Medical Image Analysis">Medical Image Analysis</button>
         <button class="filter-btn nlp" data-category="NLP">NLP</button>
         <button class="filter-btn robotics" data-category="Robotics">Robotics</button>
+    </div>
+    
+    <div class="date-filter-container">
+        <label for="date-filter">Filter by deadline: </label>
+        <select id="date-filter" class="date-filter">
+            <option value="all">All deadlines</option>
+            <option value="upcoming">Upcoming (next 30 days)</option>
+            <option value="next3months">Next 3 months</option>
+            <option value="next6months">Next 6 months</option>
+            <option value="past">Past deadlines</option>
+        </select>
     </div>
     
     <div id="filter-info" class="filter-info"></div>
@@ -37,6 +56,7 @@
         // Global variables
         let allConferences = [];
         let activeFilter = 'all';
+        let activeDateFilter = 'all';
         
         // Load the conference data from JSON file
         fetch('conferences.json')
@@ -63,6 +83,12 @@
                         // Filter and render conferences
                         filterConferences();
                     });
+                });
+                
+                // Add event listener to date filter
+                document.getElementById('date-filter').addEventListener('change', function() {
+                    activeDateFilter = this.value;
+                    filterConferences();
                 });
             })
             .catch(error => {
@@ -157,14 +183,49 @@
         
         // Function to filter conferences based on active filter
         function filterConferences() {
-            let filteredConferences;
+            let filteredConferences = allConferences;
             
-            if (activeFilter === 'all') {
-                filteredConferences = allConferences;
-            } else {
-                filteredConferences = allConferences.filter(conference => 
+            // Filter by category
+            if (activeFilter !== 'all') {
+                filteredConferences = filteredConferences.filter(conference => 
                     conference.categories.includes(activeFilter)
                 );
+            }
+            
+            // Filter by date
+            if (activeDateFilter !== 'all') {
+                const today = new Date();
+                
+                filteredConferences = filteredConferences.filter(conference => {
+                    const deadlineDate = new Date(conference.deadline);
+                    
+                    switch (activeDateFilter) {
+                        case 'upcoming':
+                            // Next 30 days
+                            const thirtyDaysFromNow = new Date();
+                            thirtyDaysFromNow.setDate(today.getDate() + 30);
+                            return deadlineDate >= today && deadlineDate <= thirtyDaysFromNow;
+                        
+                        case 'next3months':
+                            // Next 3 months
+                            const threeMonthsFromNow = new Date();
+                            threeMonthsFromNow.setMonth(today.getMonth() + 3);
+                            return deadlineDate >= today && deadlineDate <= threeMonthsFromNow;
+                        
+                        case 'next6months':
+                            // Next 6 months
+                            const sixMonthsFromNow = new Date();
+                            sixMonthsFromNow.setMonth(today.getMonth() + 6);
+                            return deadlineDate >= today && deadlineDate <= sixMonthsFromNow;
+                        
+                        case 'past':
+                            // Past deadlines
+                            return deadlineDate < today;
+                        
+                        default:
+                            return true;
+                    }
+                });
             }
             
             renderConferences(filteredConferences);
@@ -174,15 +235,73 @@
         // Function to update filter info text
         function updateFilterInfo() {
             const infoElement = document.getElementById('filter-info');
+            let countText = '';
+            let categoryText = '';
+            let dateText = '';
             
-            if (activeFilter === 'all') {
-                infoElement.textContent = `Showing all ${allConferences.length} conferences`;
-            } else {
-                const count = allConferences.filter(conf => 
+            // Get filtered conferences count
+            let filteredCount = allConferences;
+            if (activeFilter !== 'all') {
+                filteredCount = filteredCount.filter(conf => 
                     conf.categories.includes(activeFilter)
-                ).length;
+                );
+                categoryText = `${activeFilter}`;
+            } else {
+                categoryText = 'all';
+            }
+            
+            // Apply date filter for count
+            if (activeDateFilter !== 'all') {
+                const today = new Date();
+                filteredCount = filteredCount.filter(conference => {
+                    const deadlineDate = new Date(conference.deadline);
+                    
+                    switch (activeDateFilter) {
+                        case 'upcoming':
+                            const thirtyDaysFromNow = new Date();
+                            thirtyDaysFromNow.setDate(today.getDate() + 30);
+                            return deadlineDate >= today && deadlineDate <= thirtyDaysFromNow;
+                        case 'next3months':
+                            const threeMonthsFromNow = new Date();
+                            threeMonthsFromNow.setMonth(today.getMonth() + 3);
+                            return deadlineDate >= today && deadlineDate <= threeMonthsFromNow;
+                        case 'next6months':
+                            const sixMonthsFromNow = new Date();
+                            sixMonthsFromNow.setMonth(today.getMonth() + 6);
+                            return deadlineDate >= today && deadlineDate <= sixMonthsFromNow;
+                        case 'past':
+                            return deadlineDate < today;
+                        default:
+                            return true;
+                    }
+                });
                 
-                infoElement.textContent = `Showing ${count} ${activeFilter} conferences`;
+                switch (activeDateFilter) {
+                    case 'upcoming':
+                        dateText = 'in the next 30 days';
+                        break;
+                    case 'next3months':
+                        dateText = 'in the next 3 months';
+                        break;
+                    case 'next6months':
+                        dateText = 'in the next 6 months';
+                        break;
+                    case 'past':
+                        dateText = 'with past deadlines';
+                        break;
+                }
+            }
+            
+            countText = `Showing ${filteredCount.length} `;
+            
+            if (activeFilter === 'all' && activeDateFilter === 'all') {
+                infoElement.textContent = `Showing all ${allConferences.length} conferences`;
+            } else if (activeDateFilter === 'all') {
+                infoElement.textContent = `${countText} ${categoryText} conferences`;
+            } else if (activeFilter === 'all') {
+                infoElement.textContent = `${countText} conferences ${dateText}`;
+            } else {
+                infoElement.textContent = `${countText} ${categoryText} conferences ${dateText}`;
             }
         }
     </script>

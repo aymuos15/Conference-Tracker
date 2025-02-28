@@ -4,6 +4,39 @@ body {
     margin: 0 auto;
     padding: 20px;
     line-height: 1.6;
+    position: relative;  /* For positioning the contribute container */
+}
+
+/* Contribute button styles */
+.contribute-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.contribute-container a {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #f2f2f2;
+    color: #333;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+.contribute-container a:hover {
+    background-color: #e6e6e6;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-decoration: none;
+}
+
+.contribute-container i {
+    margin-right: 5px;
+    font-size: 1.1em;
 }
 
 h1 {
@@ -108,7 +141,8 @@ th, td {
     border-bottom: 1px solid #ddd;
 }
 
-/* Center text in the third column (website column) */
+/* Center text in the second column (deadline column) and third column (website column) */
+th:nth-child(2), td:nth-child(2), 
 th:nth-child(3), td:nth-child(3) {
     text-align: center;
 }
@@ -185,4 +219,24 @@ a:hover {
 
 .categories-container {
     margin-top: 5px;
+}
+
+/* Date filter styles */
+.date-filter-container {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.date-filter {
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.date-filter:hover, .date-filter:focus {
+    border-color: #3498db;
+    outline: none;
 }

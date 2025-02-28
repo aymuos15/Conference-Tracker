@@ -1,20 +1,5 @@
 # Conference Tracker
 
-## About
-A simple web application to track important academic conference deadlines across multiple research domains:
-- Computer Vision
-- Machine Learning
-- Medical Image Analysis
-- Natural Language Processing (NLP)
-- Robotics
-
-## Features
-- Filter conferences by research domain
-- View submission deadlines at a glance
-- Access conference websites directly
-- Responsive design for desktop and mobile viewing
-
-
 ## Contribution
 Please use [tag] when doing any one of the following.
 
@@ -33,6 +18,12 @@ Please use [tag] when doing any one of the following.
 
 ### Add: Feature
 - Raise an issue to begin discussion.
+
+## Features
+- Filter conferences by research domain
+- View submission deadlines at a glance
+- Access conference websites directly
+- Responsive design for desktop and mobile viewing
 
 ## Todos
 - [ ] Check if all links are working or not

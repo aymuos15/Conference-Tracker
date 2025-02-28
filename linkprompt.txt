@@ -1,0 +1,13 @@
+I have attached a json file. 
+
+It contains conferences and their submission deadline.
+
+My problem is that there is no way to automatically get:
+-  the latest deadline and
+-  the current conference site for this year (or latest one which has taken place.)
+
+Can you do it for me please?
+
+I want the json code updated.
+
+Thank you very much! :)

@@ -1,4 +1,5 @@
-# Conference Tracker
+# Search a Conference!
+Submission deadlines for the primier Machine Learning confs.
 
 ## Contribution
 Please use [tag] when doing any one of the following.
@@ -24,9 +25,24 @@ Please use [tag] when doing any one of the following.
 - View submission deadlines at a glance
 - Access conference websites directly
 - Responsive design for desktop and mobile viewing
+- A prompt to update deadlines and links for perplexity.
 
 ## Todos
 - [ ] Check if all links are working or not
 - [ ] Add github logo and link to the repository
 - [ ] Add sorting options (by date, alphabetically)
 - [ ] Add notification feature for upcoming deadlines
+- [ ] Make a better prompt for perplexity. See: `linkprompt.py`
+- [ ] Create a VLM agent to see the links and provide regular updates.
+
+# Break List
+- [] 3DV
+
+- [] ISBI
+- [] IPCAI
+- [] MIUA
+
+- [] IROS
+- [] CoRL
+
+- [] EACL

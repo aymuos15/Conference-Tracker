@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conferences</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Conferences</h1>
+    
+    <div class="filter-container">
+        <button class="filter-btn all active" data-category="all">All Conferences</button>
+        <button class="filter-btn cv" data-category="Computer Vision">Computer Vision</button>
+        <button class="filter-btn ml" data-category="Machine Learning">Machine Learning</button>
+        <button class="filter-btn med" data-category="Medical Image Analysis">Medical Image Analysis</button>
+    </div>
+    
+    <div id="filter-info" class="filter-info"></div>
+    
+    <table id="conferences-table">
+        <thead>
+            <tr>
+                <th>Conference</th>
+                <th>Date</th>
+                <th>Website</th>
+            </tr>
+        </thead>
+        <tbody id="conferences-body">
+            <!-- Table content will be dynamically generated -->
+        </tbody>
+    </table>
+
+    <script>
+        // Global variables
+        let allConferences = [];
+        let activeFilter = 'all';
+        
+        // Load the conference data from JSON file
+        fetch('conferences.json')
+            .then(response => response.json())
+            .then(data => {
+                allConferences = data.conferences;
+                renderConferences(allConferences);
+                updateFilterInfo();
+                
+                // Add event listeners to filter buttons
+                document.querySelectorAll('.filter-btn').forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Remove active class from all buttons
+                        document.querySelectorAll('.filter-btn').forEach(btn => {
+                            btn.classList.remove('active');
+                        });
+                        
+                        // Add active class to clicked button
+                        this.classList.add('active');
+                        
+                        // Get category to filter by
+                        activeFilter = this.dataset.category;
+                        
+                        // Filter and render conferences
+                        filterConferences();
+                    });
+                });
+            })
+            .catch(error => {
+                console.error('Error loading conference data:', error);
+                document.getElementById('conferences-body').innerHTML = 
+                    '<tr><td colspan="3">Error loading conference data. Please try again later.</td></tr>';
+            });
+            
+        // Function to render conferences
+        function renderConferences(conferences) {
+            const tableBody = document.getElementById('conferences-body');
+            tableBody.innerHTML = ''; // Clear existing content
+            
+            conferences.forEach(conference => {
+                const row = document.createElement('tr');
+                
+                // Conference name cell with acronym in bold and full name on next line
+                const nameCell = document.createElement('td');
+                
+                // Extract acronym and full name
+                const nameParts = conference.name.match(/^([A-Z]+)(\s?\(.+\))?$/);
+                if (nameParts) {
+                    // Create bold element for acronym
+                    const acronym = document.createElement('strong');
+                    acronym.textContent = nameParts[1];
+                    nameCell.appendChild(acronym);
+                    
+                    // Add full name on new line if it exists
+                    if (nameParts[2]) {
+                        const fullName = document.createElement('div');
+                        fullName.className = 'conference-full-name';
+                        fullName.textContent = nameParts[2].trim();
+                        nameCell.appendChild(fullName);
+                    }
+                } else {
+                    // Fallback if the regex doesn't match
+                    nameCell.textContent = conference.name;
+                }
+                
+                // Add category tags
+                const categoriesDiv = document.createElement('div');
+                categoriesDiv.className = 'categories-container';
+                
+                conference.categories.forEach(category => {
+                    const categorySpan = document.createElement('span');
+                    categorySpan.textContent = category;
+                    categorySpan.className = 'conference-category';
+                    
+                    // Apply category-specific class
+                    if (category === 'Computer Vision') categorySpan.classList.add('cv');
+                    if (category === 'Machine Learning') categorySpan.classList.add('ml');
+                    if (category === 'Medical Image Analysis') categorySpan.classList.add('med');
+                    
+                    categoriesDiv.appendChild(categorySpan);
+                });
+                
+                nameCell.appendChild(categoriesDiv);
+                
+                // Date cell - format to 3 letters for month and 2 digits for year
+                const dateCell = document.createElement('td');
+                const dateText = conference.date.replace(
+                    /(\w+)\s(\d+)-\d+,\s(\d{4})/,
+                    (match, month, day, year) => `${month.substring(0, 3)} '${year.substring(2)}`
+                );
+                dateCell.textContent = dateText;
+                
+                // Website cell with link text only
+                const websiteCell = document.createElement('td');
+                const link = document.createElement('a');
+                link.href = '#'; // Placeholder link
+                link.textContent = 'Link';
+                websiteCell.appendChild(link);
+                
+                // Add all cells to the row
+                row.appendChild(nameCell);
+                row.appendChild(dateCell);
+                row.appendChild(websiteCell);
+                
+                // Add the row to the table
+                tableBody.appendChild(row);
+            });
+        }
+        
+        // Function to filter conferences based on active filter
+        function filterConferences() {
+            let filteredConferences;
+            
+            if (activeFilter === 'all') {
+                filteredConferences = allConferences;
+            } else {
+                filteredConferences = allConferences.filter(conference => 
+                    conference.categories.includes(activeFilter)
+                );
+            }
+            
+            renderConferences(filteredConferences);
+            updateFilterInfo();
+        }
+        
+        // Function to update filter info text
+        function updateFilterInfo() {
+            const infoElement = document.getElementById('filter-info');
+            
+            if (activeFilter === 'all') {
+                infoElement.textContent = `Showing all ${allConferences.length} conferences`;
+            } else {
+                const count = allConferences.filter(conf => 
+                    conf.categories.includes(activeFilter)
+                ).length;
+                
+                infoElement.textContent = `Showing ${count} ${activeFilter} conferences`;
+            }
+        }
+    </script>
+</body>
+</html>

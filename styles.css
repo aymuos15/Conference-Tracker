@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.filter-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.all {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.filter-btn.cv {
+    background-color: #e74c3c20;
+    color: #e74c3c;
+    border: 1px solid #e74c3c40;
+}
+
+.filter-btn.ml {
+    background-color: #3498db20;
+    color: #3498db;
+    border: 1px solid #3498db40;
+}
+
+.filter-btn.med {
+    background-color: #2ecc7120;
+    color: #2ecc71;
+    border: 1px solid #2ecc7140;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filter-btn.all.active {
+    background-color: #333;
+    color: white;
+}
+
+.filter-btn.cv.active {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.filter-btn.ml.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.filter-btn.med.active {
+    background-color: #2ecc71;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Center text in the third column (website column) */
+th:nth-child(3), td:nth-child(3) {
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.conference-category {
+    font-size: 0.8em;
+    padding: 3px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+
+.cv {
+    background-color: #e74c3c20;
+    color: #e74c3c;
+}
+
+.ml {
+    background-color: #3498db20;
+    color: #3498db;
+}
+
+.med {
+    background-color: #2ecc7120;
+    color: #2ecc71;
+}
+
+.hidden {
+    display: none;
+}
+
+.filter-info {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.conference-full-name {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+.categories-container {
+    margin-top: 5px;
+}

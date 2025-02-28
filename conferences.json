@@ -1,0 +1,103 @@
+{
+    "conferences": [
+      {
+        "name": "CVPR (Conference on Computer Vision and Pattern Recognition)",
+        "categories": ["Computer Vision"],
+        "date": "June 11-15, 2025",
+        "website": "cvpr.thecvf.com"
+      },
+      {
+        "name": "ICLR (International Conference on Learning Representations)",
+        "categories": ["Machine Learning"],
+        "date": "April 24-28, 2025",
+        "website": "iclr.cc/Conferences/2025"
+      },
+      {
+        "name": "MICCAI (Medical Image Computing and Computer Assisted Intervention)",
+        "categories": ["Medical Image Analysis"],
+        "date": "September 23-27, 2025",
+        "website": "conferences.miccai.org/2025/en/default.asp"
+      },
+      {
+        "name": "ICCV (International Conference on Computer Vision)",
+        "categories": ["Computer Vision"],
+        "date": "October 11-17, 2025",
+        "website": "iccv2025.thecvf.com"
+      },
+      {
+        "name": "NeurIPS (Conference on Neural Information Processing Systems)",
+        "categories": ["Machine Learning"],
+        "date": "December 1-7, 2025",
+        "website": "neurips.cc/Conferences/2025"
+      },
+      {
+        "name": "MIDL (Medical Imaging with Deep Learning)",
+        "categories": ["Medical Image Analysis", "Machine Learning"],
+        "date": "July 9-11, 2025",
+        "website": "2025.midl.io"
+      },
+      {
+        "name": "ECCV (European Conference on Computer Vision)",
+        "categories": ["Computer Vision"],
+        "date": "August 18-24, 2025",
+        "website": "eccv2025.eu"
+      },
+      {
+        "name": "ICML (International Conference on Machine Learning)",
+        "categories": ["Machine Learning"],
+        "date": "July 20-26, 2025",
+        "website": "icml.cc/2025"
+      },
+      {
+        "name": "IPCAI (International Conference on Information Processing in Computer-Assisted Interventions)",
+        "categories": ["Medical Image Analysis"],
+        "date": "June 22-23, 2025",
+        "website": "ipcai2025.org"
+      },
+      {
+        "name": "BMVC (British Machine Vision Conference)",
+        "categories": ["Computer Vision"],
+        "date": "September 4-7, 2025",
+        "website": "bmvc2025.org"
+      },
+      {
+        "name": "MIUA (Medical Image Understanding and Analysis)",
+        "categories": ["Medical Image Analysis"],
+        "date": "July 10-12, 2025",
+        "website": "miua2025.com"
+      },
+      {
+        "name": "ICPR (International Conference on Pattern Recognition)",
+        "categories": ["Computer Vision", "Machine Learning"],
+        "date": "August 10-14, 2025",
+        "website": "icpr2025.org"
+      },
+      {
+        "name": "IPMI (Information Processing in Medical Imaging)",
+        "categories": ["Medical Image Analysis"],
+        "date": "June 25-30, 2025",
+        "website": "ipmi2025.org"
+      },
+      {
+        "name": "ISBI (International Symposium on Biomedical Imaging)",
+        "categories": ["Medical Image Analysis"],
+        "date": "April 15-18, 2025",
+        "website": "2025.biomedicalimaging.org"
+      }
+    ],
+    "categoryColors": {
+      "Computer Vision": {
+        "bg": "#e74c3c20",
+        "text": "#e74c3c"
+      },
+      "Machine Learning": {
+        "bg": "#3498db20",
+        "text": "#3498db"
+      },
+      "Medical Image Analysis": {
+        "bg": "#2ecc7120",
+        "text": "#2ecc71"
+      }
+    }
+  }
+  

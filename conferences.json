@@ -1,282 +1,399 @@
 {
-  "conferences": [
-    {
-      "name": "CVPR (Conference on Computer Vision and Pattern Recognition)",
-      "categories": ["Computer Vision"],
-      "deadline": "November 10, 2024",
-      "website": "cvpr.thecvf.com",
-      "isLatestDeadline": false,
-      "currentWebsite": "cvpr.thecvf.com"
-    },
-    {
-      "name": "ICLR (International Conference on Learning Representations)",
-      "categories": ["Machine Learning"],
-      "deadline": "October 5, 2024",
-      "website": "iclr.cc/Conferences/2025",
-      "isLatestDeadline": false,
-      "currentWebsite": "iclr.cc/Conferences/2025"
-    },
-    {
-      "name": "MICCAI (Medical Image Computing and Computer Assisted Intervention)",
-      "categories": ["Medical Image Analysis"],
-      "deadline": "March 15, 2025",
-      "website": "conferences.miccai.org/2025/en/default.asp",
-      "isLatestDeadline": false,
-      "currentWebsite": "conferences.miccai.org/2025/en/default.asp"
-    },
-    {
-      "name": "ICCV (International Conference on Computer Vision)",
-      "categories": ["Computer Vision"],
-      "deadline": "March 8, 2025",
-      "website": "iccv2025.thecvf.com",
-      "isLatestDeadline": false,
-      "currentWebsite": "iccv2025.thecvf.com"
-    },
-    {
-      "name": "NeurIPS (Conference on Neural Information Processing Systems)",
-      "categories": ["Machine Learning"],
-      "deadline": "May 23, 2025",
-      "website": "neurips.cc/Conferences/2025",
-      "isLatestDeadline": false,
-      "currentWebsite": "neurips.cc/Conferences/2025"
-    },
-    {
-      "name": "MIDL (Medical Imaging with Deep Learning)",
-      "categories": ["Medical Image Analysis", "Machine Learning"],
-      "deadline": "January 21, 2025",
-      "website": "2025.midl.io",
-      "isLatestDeadline": false,
-      "currentWebsite": "2025.midl.io"
-    },
-    {
-      "name": "ECCV (European Conference on Computer Vision)",
-      "categories": ["Computer Vision"],
-      "deadline": "March 1, 2025",
-      "website": "eccv2025.eu",
-      "isLatestDeadline": false,
-      "currentWebsite": "eccv2025.eu"
-    },
-    {
-      "name": "ICML (International Conference on Machine Learning)",
-      "categories": ["Machine Learning"],
-      "deadline": "February 2, 2025",
-      "website": "icml.cc/2025",
-      "isLatestDeadline": false,
-      "currentWebsite": "icml.cc/2025"
-    },
-    {
-      "name": "IPCAI (International Conference on Information Processing in Computer-Assisted Interventions)",
-      "categories": ["Medical Image Analysis"],
-      "deadline": "January 15, 2025",
-      "website": "ipcai2025.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "ipcai2025.org"
-    },
-    {
-      "name": "BMVC (British Machine Vision Conference)",
-      "categories": ["Computer Vision"],
-      "deadline": "April 30, 2025",
-      "website": "bmvc2025.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "bmvc2025.org"
-    },
-    {
-      "name": "MIUA (Medical Image Understanding and Analysis)",
-      "categories": ["Medical Image Analysis"],
-      "deadline": "March 20, 2025",
-      "website": "miua2025.com",
-      "isLatestDeadline": false,
-      "currentWebsite": "miua2025.com"
-    },
-    {
-      "name": "ICPR (International Conference on Pattern Recognition)",
-      "categories": ["Computer Vision", "Machine Learning"],
-      "deadline": "February 15, 2025",
-      "website": "icpr2025.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "icpr2025.org"
-    },
-    {
-      "name": "IPMI (Information Processing in Medical Imaging)",
-      "categories": ["Medical Image Analysis"],
-      "deadline": "January 10, 2025",
-      "website": "ipmi2025.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "ipmi2025.org"
-    },
-    {
-      "name": "ISBI (International Symposium on Biomedical Imaging)",
-      "categories": ["Medical Image Analysis"],
-      "deadline": "November 20, 2024",
-      "website": "2025.biomedicalimaging.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "2025.biomedicalimaging.org"
-    },
-    {
-      "name": "ACL (Association for Computational Linguistics)",
-      "categories": ["NLP"],
-      "deadline": "February 12, 2025",
-      "website": "2025.aclweb.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "2025.aclweb.org"
-    },
-    {
-      "name": "EMNLP (Empirical Methods in Natural Language Processing)",
-      "categories": ["NLP"],
-      "deadline": "May 15, 2025",
-      "website": "2025.emnlp.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "2025.emnlp.org"
-    },
-    {
-      "name": "COLING (International Conference on Computational Linguistics)",
-      "categories": ["NLP"],
-      "deadline": "March 30, 2025",
-      "website": "coling2025.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "coling2025.org"
-    },
-    {
-      "name": "NAACL (North American Chapter of the Association for Computational Linguistics)",
-      "categories": ["NLP"],
-      "deadline": "January 25, 2025",
-      "website": "2025.naacl.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "2025.naacl.org"
-    },
-    {
-      "name": "EACL (European Chapter of the Association for Computational Linguistics)",
-      "categories": ["NLP"],
-      "deadline": "October 15, 2024",
-      "website": "2025.eacl.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "2025.eacl.org"
-    },
-    {
-      "name": "ICRA (International Conference on Robotics and Automation)",
-      "categories": ["Robotics"],
-      "deadline": "September 15, 2024",
-      "website": "icra2025.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "icra2025.org"
-    },
-    {
-      "name": "IROS (International Conference on Intelligent Robots and Systems)",
-      "categories": ["Robotics"],
-      "deadline": "March 1, 2025",
-      "website": "iros2025.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "iros2025.org"
-    },
-    {
-      "name": "RSS (Robotics: Science and Systems)",
-      "categories": ["Robotics"],
-      "deadline": "February 1, 2025",
-      "website": "roboticsconference.org/2025",
-      "isLatestDeadline": false,
-      "currentWebsite": "roboticsconference.org/2025"
-    },
-    {
-      "name": "CoRL (Conference on Robot Learning)",
-      "categories": ["Robotics", "Machine Learning"],
-      "deadline": "June 15, 2025",
-      "website": "corl2025.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "corl2025.org"
-    },
-    {
-      "name": "AAMAS (International Conference on Autonomous Agents and Multiagent Systems)",
-      "categories": ["Robotics"],
-      "deadline": "December 1, 2024",
-      "website": "aamas2025.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "aamas2025.org"
-    },
-    {
-      "name": "AAAI (Association for the Advancement of Artificial Intelligence)",
-      "categories": ["Machine Learning"],
-      "deadline": "September 1, 2024",
-      "website": "aaai.org/Conferences/AAAI-25",
-      "isLatestDeadline": false,
-      "currentWebsite": "aaai.org/Conferences/AAAI-25"
-    },
-    {
-      "name": "IJCAI (International Joint Conference on Artificial Intelligence)",
-      "categories": ["Machine Learning"],
-      "deadline": "January 15, 2025",
-      "website": "ijcai-25.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "ijcai-25.org"
-    },
-    {
-      "name": "UAI (Conference on Uncertainty in Artificial Intelligence)",
-      "categories": ["Machine Learning"],
-      "deadline": "February 20, 2025",
-      "website": "auai.org/uai2025",
-      "isLatestDeadline": false,
-      "currentWebsite": "auai.org/uai2025"
-    },
-    {
-      "name": "AISTATS (International Conference on Artificial Intelligence and Statistics)",
-      "categories": ["Machine Learning"],
-      "deadline": "October 8, 2024",
-      "website": "aistats.org/aistats2025",
-      "isLatestDeadline": false,
-      "currentWebsite": "aistats.org/aistats2025"
-    },
-    {
-      "name": "WACV (Winter Conference on Applications of Computer Vision)",
-      "categories": ["Computer Vision"],
-      "deadline": "August 25, 2024",
-      "website": "wacv2025.thecvf.com",
-      "isLatestDeadline": false,
-      "currentWebsite": "wacv2025.thecvf.com"
-    },
-    {
-      "name": "ACCV (Asian Conference on Computer Vision)",
-      "categories": ["Computer Vision"],
-      "deadline": "July 5, 2025",
-      "website": "accv2025.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "accv2025.org"
-    },
-    {
-      "name": "ICIP (International Conference on Image Processing)",
-      "categories": ["Computer Vision"],
-      "deadline": "January 31, 2025",
-      "website": "2025.ieeeicip.org",
-      "isLatestDeadline": false,
-      "currentWebsite": "2025.ieeeicip.org"
-    },
-    {
-      "name": "3DV (International Conference on 3D Vision)",
-      "categories": ["Computer Vision"],
-      "deadline": "July 15, 2025",
-      "website": "3dv2025.com",
-      "isLatestDeadline": true,
-      "currentWebsite": "3dv2025.com"
+    "conferences": [
+        {
+            "name": "CVPR (Conference on Computer Vision and Pattern Recognition)",
+            "categories": [
+                "Computer Vision"
+            ],
+            "deadline": "Based on the provided HTML content, there is no specific mention of the paper submission deadline for the most recent edition of the CVPR conference. Therefore, the response is:\n\nNo date found",
+            "website": "cvpr.thecvf.com",
+            "isLatestDeadline": true,
+            "currentWebsite": "cvpr.thecvf.com",
+            "lastChecked": "2025-02-28",
+            "submission_date": "2023-11-17"
+        },
+        {
+            "name": "ICLR (International Conference on Learning Representations)",
+            "categories": [
+                "Machine Learning"
+            ],
+            "deadline": "October 5, 2024",
+            "website": "iclr.cc/Conferences/2025",
+            "isLatestDeadline": true,
+            "currentWebsite": "iclr.cc/Conferences/2025",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "MICCAI (Medical Image Computing and Computer Assisted Intervention)",
+            "categories": [
+                "Medical Image Analysis"
+            ],
+            "deadline": "March 15, 2025",
+            "website": "conferences.miccai.org/2025/en/default.asp",
+            "isLatestDeadline": true,
+            "currentWebsite": "conferences.miccai.org/2025/en/default.asp",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "ICCV (International Conference on Computer Vision)",
+            "categories": [
+                "Computer Vision"
+            ],
+            "deadline": "March 8, 2025",
+            "website": "iccv2025.thecvf.com",
+            "isLatestDeadline": false,
+            "currentWebsite": "iccv2025.thecvf.com",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "NeurIPS (Conference on Neural Information Processing Systems)",
+            "categories": [
+                "Machine Learning"
+            ],
+            "deadline": "May 23, 2025",
+            "website": "neurips.cc/Conferences/2025",
+            "isLatestDeadline": false,
+            "currentWebsite": "neurips.cc/Conferences/2025",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "MIDL (Medical Imaging with Deep Learning)",
+            "categories": [
+                "Medical Image Analysis",
+                "Machine Learning"
+            ],
+            "deadline": "January 21, 2025",
+            "website": "2025.midl.io",
+            "isLatestDeadline": true,
+            "currentWebsite": "2025.midl.io",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "ECCV (European Conference on Computer Vision)",
+            "categories": [
+                "Computer Vision"
+            ],
+            "deadline": "March 1, 2025",
+            "website": "eccv2025.eu",
+            "isLatestDeadline": false,
+            "currentWebsite": "eccv2025.eu",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "ICML (International Conference on Machine Learning)",
+            "categories": [
+                "Machine Learning"
+            ],
+            "deadline": "February 2, 2025",
+            "website": "icml.cc/2025",
+            "isLatestDeadline": false,
+            "currentWebsite": "icml.cc/2025",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "IPCAI (International Conference on Information Processing in Computer-Assisted Interventions)",
+            "categories": [
+                "Medical Image Analysis"
+            ],
+            "deadline": "January 15, 2025",
+            "website": "ipcai2025.org",
+            "isLatestDeadline": false,
+            "currentWebsite": "ipcai2025.org",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "BMVC (British Machine Vision Conference)",
+            "categories": [
+                "Computer Vision"
+            ],
+            "deadline": "April 30, 2025",
+            "website": "bmvc2025.org",
+            "isLatestDeadline": false,
+            "currentWebsite": "bmvc2025.org",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "MIUA (Medical Image Understanding and Analysis)",
+            "categories": [
+                "Medical Image Analysis"
+            ],
+            "deadline": "March 20, 2025",
+            "website": "miua2025.com",
+            "isLatestDeadline": false,
+            "currentWebsite": "miua2025.com",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "ICPR (International Conference on Pattern Recognition)",
+            "categories": [
+                "Computer Vision",
+                "Machine Learning"
+            ],
+            "deadline": "February 15, 2025",
+            "website": "icpr2025.org",
+            "isLatestDeadline": false,
+            "currentWebsite": "icpr2025.org",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "IPMI (Information Processing in Medical Imaging)",
+            "categories": [
+                "Medical Image Analysis"
+            ],
+            "deadline": "December 16, 2024 23:59 PST",
+            "website": "ipmi2025.org",
+            "isLatestDeadline": true,
+            "currentWebsite": "ipmi2025.org",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "ISBI (International Symposium on Biomedical Imaging)",
+            "categories": [
+                "Medical Image Analysis"
+            ],
+            "deadline": "November 20, 2024",
+            "website": "2025.biomedicalimaging.org",
+            "isLatestDeadline": false,
+            "currentWebsite": "2025.biomedicalimaging.org",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "ACL (Association for Computational Linguistics)",
+            "categories": [
+                "NLP"
+            ],
+            "deadline": "February 15, 2025, UTC -12h (anywhere on earth)",
+            "website": "2025.aclweb.org",
+            "isLatestDeadline": true,
+            "currentWebsite": "2025.aclweb.org",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "EMNLP (Empirical Methods in Natural Language Processing)",
+            "categories": [
+                "NLP"
+            ],
+            "deadline": "May 15, 2025",
+            "website": "2025.emnlp.org",
+            "isLatestDeadline": true,
+            "currentWebsite": "2025.emnlp.org",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "COLING (International Conference on Computational Linguistics)",
+            "categories": [
+                "NLP"
+            ],
+            "deadline": "March 30, 2025",
+            "website": "coling2025.org",
+            "isLatestDeadline": true,
+            "currentWebsite": "coling2025.org",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "NAACL (North American Chapter of the Association for Computational Linguistics)",
+            "categories": [
+                "NLP"
+            ],
+            "deadline": "October 15, 2024 AoE",
+            "website": "2025.naacl.org",
+            "isLatestDeadline": true,
+            "currentWebsite": "2025.naacl.org",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "EACL (European Chapter of the Association for Computational Linguistics)",
+            "categories": [
+                "NLP"
+            ],
+            "deadline": "October 15, 2024",
+            "website": "2025.eacl.org",
+            "isLatestDeadline": false,
+            "currentWebsite": "2025.eacl.org",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "ICRA (International Conference on Robotics and Automation)",
+            "categories": [
+                "Robotics"
+            ],
+            "deadline": "September 15, 2024",
+            "website": "icra2025.org",
+            "isLatestDeadline": true,
+            "currentWebsite": "icra2025.org",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "IROS (International Conference on Intelligent Robots and Systems)",
+            "categories": [
+                "Robotics"
+            ],
+            "deadline": "March 1, 2025",
+            "website": "iros2025.org",
+            "isLatestDeadline": false,
+            "currentWebsite": "iros2025.org",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "RSS (Robotics: Science and Systems)",
+            "categories": [
+                "Robotics"
+            ],
+            "deadline": "January 24, 2025 AoE",
+            "website": "roboticsconference.org/2025",
+            "isLatestDeadline": true,
+            "currentWebsite": "roboticsconference.org/2025",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "CoRL (Conference on Robot Learning)",
+            "categories": [
+                "Robotics",
+                "Machine Learning"
+            ],
+            "deadline": "June 15, 2025",
+            "website": "corl2025.org",
+            "isLatestDeadline": false,
+            "currentWebsite": "corl2025.org",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "AAMAS (International Conference on Autonomous Agents and Multiagent Systems)",
+            "categories": [
+                "Robotics"
+            ],
+            "deadline": "December 1, 2024",
+            "website": "aamas2025.org",
+            "isLatestDeadline": true,
+            "currentWebsite": "aamas2025.org",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "AAAI (Association for the Advancement of Artificial Intelligence)",
+            "categories": [
+                "Machine Learning"
+            ],
+            "deadline": "September 1, 2024",
+            "website": "aaai.org/Conferences/AAAI-25",
+            "isLatestDeadline": false,
+            "currentWebsite": "aaai.org/Conferences/AAAI-25",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "IJCAI (International Joint Conference on Artificial Intelligence)",
+            "categories": [
+                "Machine Learning"
+            ],
+            "deadline": "January 15, 2025",
+            "website": "ijcai-25.org",
+            "isLatestDeadline": false,
+            "currentWebsite": "ijcai-25.org",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "UAI (Conference on Uncertainty in Artificial Intelligence)",
+            "categories": [
+                "Machine Learning"
+            ],
+            "deadline": "February 20, 2025",
+            "website": "auai.org/uai2025",
+            "isLatestDeadline": true,
+            "currentWebsite": "auai.org/uai2025",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "AISTATS (International Conference on Artificial Intelligence and Statistics)",
+            "categories": [
+                "Machine Learning"
+            ],
+            "deadline": "October 8, 2024",
+            "website": "aistats.org/aistats2025",
+            "isLatestDeadline": true,
+            "currentWebsite": "aistats.org/aistats2025",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "WACV (Winter Conference on Applications of Computer Vision)",
+            "categories": [
+                "Computer Vision"
+            ],
+            "deadline": "August 25, 2024",
+            "website": "wacv2025.thecvf.com",
+            "isLatestDeadline": false,
+            "currentWebsite": "wacv2025.thecvf.com",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "ACCV (Asian Conference on Computer Vision)",
+            "categories": [
+                "Computer Vision"
+            ],
+            "deadline": "July 5, 2025",
+            "website": "accv2025.org",
+            "isLatestDeadline": false,
+            "currentWebsite": "accv2025.org",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "ICIP (International Conference on Image Processing)",
+            "categories": [
+                "Computer Vision"
+            ],
+            "deadline": "Based on the provided HTML content, there is no information about the paper submission deadline for the ICIP conference. Therefore, the response is:\n\nNo date found",
+            "website": "2025.ieeeicip.org",
+            "isLatestDeadline": true,
+            "currentWebsite": "2025.ieeeicip.org",
+            "lastChecked": "2025-02-28"
+        },
+        {
+            "name": "3DV (International Conference on 3D Vision)",
+            "categories": [
+                "Computer Vision"
+            ],
+            "deadline": "July 15, 2025",
+            "website": "3dv2025.com",
+            "isLatestDeadline": false,
+            "currentWebsite": "3dv2025.com",
+            "lastCheckError": "Could not fetch website content",
+            "lastChecked": "2025-02-28"
+        }
+    ],
+    "categoryColors": {
+        "Computer Vision": {
+            "bg": "#e74c3c20",
+            "text": "#e74c3c"
+        },
+        "Machine Learning": {
+            "bg": "#3498db20",
+            "text": "#3498db"
+        },
+        "Medical Image Analysis": {
+            "bg": "#2ecc7120",
+            "text": "#2ecc71"
+        },
+        "NLP": {
+            "bg": "#9b59b620",
+            "text": "#9b59b6"
+        },
+        "Robotics": {
+            "bg": "#f39c1220",
+            "text": "#f39c12"
+        }
     }
-  ],
-  "categoryColors": {
-    "Computer Vision": {
-      "bg": "#e74c3c20",
-      "text": "#e74c3c"
-    },
-    "Machine Learning": {
-      "bg": "#3498db20",
-      "text": "#3498db"
-    },
-    "Medical Image Analysis": {
-      "bg": "#2ecc7120",
-      "text": "#2ecc71"
-    },
-    "NLP": {
-      "bg": "#9b59b620",
-      "text": "#9b59b6"
-    },
-    "Robotics": {
-      "bg": "#f39c1220",
-      "text": "#f39c12"
-    }
-  }
 }
